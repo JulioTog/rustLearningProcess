@@ -5,6 +5,9 @@ pub fn run() {
     integers_example();
     floats_example();
     booleans_example();
+    characters_example();
+    constants_example();
+    shadowing_example();
     // more to come...
 }
 
@@ -41,3 +44,23 @@ fn booleans_example() {
 
 }
 
+fn characters_example() {
+    let letter = 'R';
+    let emoji = '🚀';
+    let symbol = '©';
+
+    println!("Characters: letter = {}, emoji = {}, symbol = {}", letter, emoji, symbol);
+}
+
+fn constants_example() {
+    const MAX_USERS: u32 = 100;
+    println!("Constants: MAX_USERS = {}", MAX_USERS);
+}
+
+fn shadowing_example() {
+    let x = 5;
+    let x = x + 1;
+    let x = format!("x is now: {}", x); //shadowing with a new value
+
+    println!("Shadowing: x = {}", x);
+}
