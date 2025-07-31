@@ -13,4 +13,13 @@ fn if_statement() {
     } else {
         println!("Number is greater than 5");
     }
+
+    //if is an expression, so it can be used in a let statement
+    let result = if number > 5 {
+        "big"
+    } else {
+        "small"
+    };
+
+    println!("Result: {}", result);
 }
