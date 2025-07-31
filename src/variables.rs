@@ -1,10 +1,25 @@
 pub fn run() {
+    println!("--- Variables Examples ---");
+    immutability_example();
+    mutability_example();
+    integers_example();
+    // more to come...
+}
 
-    // Variables are declared using the let keyword
-    // Variables are immutable by default
+fn immutability_example() {
+    let x = 5;
+    println!("Immutability: x = {}", x);
+}
+
+fn mutability_example() {
     let mut x = 5;
-    println!("x: {}", x);
-    // trying to change the value of x will give an error
     x = 6;
-    println!("x is now: {}", x);
+    println!("Mutability: x = {}", x);
+}
+
+fn integers_example() {
+    let a = 10; //inferred to be i32
+    let b: i64 = 20; //explicit type
+    let c = -5; //negative integer
+    println!("Integers: a = {}, b = {}, c = {}", a, b, c);
 }
