@@ -4,6 +4,8 @@ pub fn run() {
     loop_statement();
     while_statement();
     for_statement();
+    match_statement();
+    range_match_statement();
 }
 
 fn if_statement() {
@@ -63,3 +65,34 @@ fn for_statement() {
     }
 }
 
+fn match_statement() {
+    let number = 5;
+
+    match number {
+        1 => println!("One"),
+        2 => println!("Two"),
+        3 => println!("Three"),
+        _ => println!("Other"), //_ is a catch all pattern
+    }
+}
+
+fn range_match_statement() {
+  let score = 88;
+
+  match score {
+    90..=100 => println!("A"),
+    80..=89 => println!("B"),
+    70..=79 => println!("C"),
+    0..=69 => println!("D Or F"),
+    _ => println!("Invalid score"),
+  }
+
+  //binding a matched value 
+  let num = 7;
+
+  match num {
+    val @ 1..=5 => println!("Low number: {}", val),
+    val @ 6..=10 => println!("medium number: {}", val),
+    _ => println!("other"   ),
+  }
+}
